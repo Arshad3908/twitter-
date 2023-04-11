@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #1da1f2;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 50px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .heading {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .image {
+            flex-basis: calc(33.33% - 20px);
+            margin: 0 10px;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: white;
+            color: #1da1f2;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #ffffffa6;
+        }
+
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 36px;
+            }
+
+            .description {
+                font-size: 18px;
+            }
+
+            .image {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+    </style>
+    <script>
+        var currentImage = 0;
+        var images = document.getElementsByClassName('image');
+
+        function showNextImage() {
+            images[currentImage].style.display = 'none';
+            currentImage = (currentImage + 1) % images.length;
+            images[currentImage].style.display = 'block';
+        }
+
+        function showPreviousImage() {
+            images[currentImage].style.display = 'none';
+            currentImage = (currentImage - 1 + images.length) % images.length;
+            images[currentImage].style.display = 'block';
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 360 seconds
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/340709266_890616918693750_4870197189398746278_n.png?stp=dst-png_p206x206&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHbg98BQGngNNYfiIYalsttOvB534n89Ms68Hnfifz0y0vlpHX2Y_3cGUNksIZ70stCW0_pDhgA2MHkU2dsxXHr&_nc_ohc=F-_M1fvces4AX_XEvZf&_nc_oc=AQkeU823jh_BAXNxCQ_FBbtirMT6gszzBUsgSVwycJTv3wr9qPbfZidC-zlfMuK8Yn5Y3h82aEDhGsTIEiP0Qo_g&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSGTKr6o00jheXgmedniF5yi0mtTQ1bH2b0C9f0bmjiVg&oe=645C73AF" alt="Twitter Logo">
+        </div>
+        <div class="heading">Welcome to Oluwasolakehinde Twitter</div>
+        <div class="description">Connect with the world and express yourself</div>
+        <div class="images-container">
+            <div class="image">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/340968835_1232764117627704_2375381861493073448_n.png?stp=dst-png_s206x206&_nc_cat=105&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFWoYWdFlzP_FKjKy5h3exAA02e9JCRYRwDTZ70kJFhHMXjJ4WHKliXXDct_4pCIoGVBx3HkQ9PG-n1VYWoxiSt&_nc_ohc=OwNGo8wvfiMAX_Fw4gp&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTQWV5jIa4Ysa-_tuFXcJkS91gaPtIhViopJDIaqu5p4g&oe=645C97B5" alt="Image 1">
+            </div>
+            <div class="image">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/339592194_898132454633584_7618121080072620398_n.png?stp=dst-png_s206x206&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFAtOkvNmHvfnGMIoCe1QLJl5_xPBimR0GXn_E8GKZHQXQwj4cRCx6OBEjoCMTHWUHwYY9b5HYtZQ0kAm3sQ4BR&_nc_ohc=hsEDE43FtREAX9V-OoB&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRC113Kjf_Q9PcNQSsGLRNkvY-UwrV7UgqgYybm6uZT7g&oe=645C75B0" alt="Image 2">
+            </div>
+           
+            <div class="image">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/339833646_526907962855252_6473973814705410187_n.png?stp=dst-png_s206x206&_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGxanpHj0LHf4ryjACbN9NNTv2Y5YIRybFO_ZjlghHJseLEobfe73jLmBKPAJoFeF1ZhOHPlpGR1gpiO3k_a74K&_nc_ohc=GZXnyRhYz4gAX_05fxz&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQwzpHpXcKLGtDxhFis1q7RuoFHbeS4VXkrxfRLD64D4w&oe=645C8E70" alt="Image 3">
+            </div>
+        </div>
+        <a href="#" class="cta-button">Sign up now</a>
+    </div>
+</body>
+
+</html>
